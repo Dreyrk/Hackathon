@@ -49,7 +49,7 @@ function Formulaire() {
       >
         <div className="flex justify-between">
           <label className="text-white" htmlFor="Name">
-            Name :
+            Prénom :
           </label>
           <input
             className="self-center rounded-md shadow-sm h-full border  "
