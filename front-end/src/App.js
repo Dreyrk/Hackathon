@@ -1,10 +1,10 @@
 import { React, useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
 import MaValise from "./Pages/MaValise";
 import MonVoyage from "./Pages/MonVoyage";
+import NotFound from "./Components/NotFound";
 
 function App() {
   const [pageTitle, setPageTitle] = useState("La Valise");
@@ -38,8 +38,8 @@ function App() {
             />
           }
         />
+        <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer footerOpen={footerOpen} setFooterOpen={setFooterOpen} />
     </div>
   );
 }

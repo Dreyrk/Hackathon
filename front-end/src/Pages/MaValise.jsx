@@ -4,11 +4,12 @@ import CheckListResult from "../Components/CheckListResult";
 
 export default function MaValise({ setPageTitle, setFooterOpen }) {
   const [contenuValise, setContenuValise] = useState([]);
+
   useEffect(() => setPageTitle("Ma Valise"));
   useEffect(() => setFooterOpen(false));
 
   useEffect(() => {
-    fetch("http://localhost:5001/api/items/essentiels")
+    fetch("http://localhost:5020/api/items/essentiels")
       .then((results) => results.json())
       .then((datas) => {
         setContenuValise(datas);
